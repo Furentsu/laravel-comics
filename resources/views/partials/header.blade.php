@@ -6,7 +6,9 @@
 
     <ul>
        @foreach ($header_options as $option)
-           <li><a href="{{$option['route']}}">{{ $option['text'] }}</a></li>
+           <li class="{{request()->routeIs($option['route'] ? 'active' : '')}}">
+               <a href="{{$option['route']}}">{{ $option['text'] }}</a>
+           </li>
        @endforeach
     </ul>
 

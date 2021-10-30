@@ -15,7 +15,7 @@
         @yield('content')
     </main>
 
-    @include('partials.footer')
+    @include('partials.footer', ['comics' => config('footer_dc_comics'), 'shop' => config('footer_shop'), 'dc' => config('footer_dc'), 'sites' => config('footer_sites')])
 
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

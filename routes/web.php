@@ -18,7 +18,11 @@ Route::get('/characters', function () {
 })->name('characters');
 
 Route::get('/', function () {
-    return view('comics');
+    return view('comics', ['comics' => config('comics')]);
+})->name('comics');
+
+Route::get('/comics', function () {
+    return view('comics', ['comics' => config('comics')]);
 })->name('comics');
 
 Route::get('/movies', function () {
