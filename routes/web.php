@@ -18,12 +18,22 @@ Route::get('/characters', function () {
 })->name('characters');
 
 Route::get('/', function () {
-    return view('comics', ['comics' => config('comics')]);
+    return view('comics.index', ['comics' => config('comics')]);
 })->name('comics');
 
 Route::get('/comics', function () {
-    return view('comics', ['comics' => config('comics')]);
+    return view('comics.index', ['comics' => config('comics')]);
 })->name('comics');
+
+Route::get('/comic/{id}', function ($id) {
+    $comics = config('comics');
+
+    if (is_numeric($id) && ($id < count($comics)) && ($id >= 0)) {
+        return view('comics.show', ['comic' => $comics[$id]]);
+    }
+    abort('404');
+    
+})->name('comic');
 
 Route::get('/movies', function () {
     return view('movies');
@@ -56,13 +66,3 @@ Route::get('/news', function () {
 Route::get('/shop', function () {
     return view('shop');
 })->name('shop');
-
-Route::get('/comic/{id}', function ($id) {
-    $comics = config('comics');
-
-    if (is_numeric($id) && ($id < count($comics)) && ($id >= 0)) {
-        return view('comic', ['comic' => $comics[$id]]);
-    }
-    abort('404');
-    
-})->name('comic');
