@@ -1,0 +1,71 @@
+header { 
+
+    // Navbar
+    .header-top-container {
+        display: flex;
+        align-items: center;
+        height: 120px;
+        justify-content: space-around;
+
+        #logo {
+            img {
+                width: 80px;
+            }
+        }
+
+        nav {
+
+            height: 100%;
+
+            ul {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            list-style: none;
+
+                li {
+                    display: flex;
+                    align-items: stretch;
+                    height: 100%;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        border-bottom: 5px solid transparent;
+                        color: black;
+                        transition: all 250ms, ease-in-out 250ms;
+
+                        &:hover {
+                            border-bottom: 5px solid blue;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    // Jumbotron
+    #jumbo {
+        background-image: url("../images/jumbotron.jpg") ;
+        height: 440px;
+        position: relative;
+
+        .main-content-title {
+            width: fit-content;
+            font-size: 1rem;
+            padding: 12px;
+            background-color: blue;
+            color: white;
+            text-transform: uppercase;
+            cursor: default;
+            position: absolute;
+            top:418px;
+            left: 210px
+        }
+    }
+}

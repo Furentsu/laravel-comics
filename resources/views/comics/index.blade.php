@@ -3,7 +3,7 @@
 @section('title', 'Comics')
 
 @section('content')
-    <div class="container">
+    <section>
         <div class="comics_container">
             @foreach ($comics as $comic)
                 <div class="comic_card">
@@ -14,5 +14,7 @@
                 </div>
             @endforeach
         </div>
-    </div>    
+        <button type="button">Load more</button>  
+    </section>
+         
 @endsection

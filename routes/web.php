@@ -25,7 +25,7 @@ Route::get('/comics', function () {
     return view('comics.index', ['comics' => config('comics')]);
 })->name('comics');
 
-Route::get('/comic/{id}', function ($id) {
+Route::get('/comic{id}', function ($id) {
     $comics = config('comics');
 
     if (is_numeric($id) && ($id < count($comics)) && ($id >= 0)) {
