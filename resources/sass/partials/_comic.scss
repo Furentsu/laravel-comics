@@ -1,4 +1,70 @@
+
 .comic-cover-displayer {
     height: 100px;
     background-color: $primaryBlue;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: -220px;
+        left: 150px;
+    }
+}
+
+.top {
+    background-color: $primaryWhite;
+    
+    .comic-details-top {
+        display: flex;
+
+        .comic-top-left {
+            width: 60%;
+            padding: 0 50px;
+            text-align: left;
+        }
+    
+        .comic-top-right {
+            width: 40%;
+        }
+    }
+}
+
+.bottom {
+    background-color: $lightGrey;
+
+    .comic-details-bottom {
+        display: flex;
+        text-align: left;
+
+        .comic-bottom-left {
+            width: 50%;
+            padding: 0 50px;
+
+            .artists,
+            .writers {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .artists-names,
+            .writers-names {
+                width: 70%;
+            }
+            
+        }
+    
+        .comic-bottom-right {
+            width: 50%;
+            
+            .series,
+            .price,
+            .sale-date {
+                display: flex;
+
+                span {
+                    width: 30%;
+                }
+            }
+        }
+    }
 }

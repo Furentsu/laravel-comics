@@ -10,7 +10,7 @@
             <ul>
                 @foreach ($header_options as $option)
                     <li class="{{request()->routeIs($option['route'] ? 'active' : '')}}">
-                        <a href="{{$option['route']}}">{{ $option['text'] }}</a>
+                        <a href="{{route($option['route'])}}">{{ $option['text'] }}</a>
                     </li>
                 @endforeach
             </ul>
@@ -32,7 +32,3 @@
     </div>
 
 </header>
-
-@section('cdn-import')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"> 
-@endsection

@@ -21,11 +21,11 @@ Route::get('/', function () {
     return view('comics.index', ['comics' => config('comics')]);
 })->name('comics');
 
-Route::get('/comics', function () {
-    return view('comics.index', ['comics' => config('comics')]);
-})->name('comics');
+// Route::get('/comics', function () {
+//     return view('comics.index', ['comics' => config('comics')]);
+// })->name('comics');
 
-Route::get('/comic{id}', function ($id) {
+Route::get('/comics/{id}', function ($id) {
     $comics = config('comics');
 
     if (is_numeric($id) && ($id < count($comics)) && ($id >= 0)) {
@@ -33,7 +33,7 @@ Route::get('/comic{id}', function ($id) {
     }
     abort('404');
     
-})->name('comic');
+})->name('comics.show');
 
 Route::get('/movies', function () {
     return view('movies');

@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
 header .header-top-container {
   display: flex;
   align-items: center;
@@ -203,14 +213,59 @@ section button:hover {
 .comic-cover-displayer {
   height: 100px;
   background-color: #3182F9;
+  position: relative;
+}
+.comic-cover-displayer img {
+  position: absolute;
+  top: -220px;
+  left: 150px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.top {
+  background-color: #ffff;
+}
+.top .comic-details-top {
+  display: flex;
+}
+.top .comic-details-top .comic-top-left {
+  width: 60%;
+  padding: 0 50px;
+  text-align: left;
+}
+.top .comic-details-top .comic-top-right {
+  width: 40%;
 }
 
-body {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+.bottom {
+  background-color: #d3d3d3;
+}
+.bottom .comic-details-bottom {
+  display: flex;
+  text-align: left;
+}
+.bottom .comic-details-bottom .comic-bottom-left {
+  width: 50%;
+  padding: 0 50px;
+}
+.bottom .comic-details-bottom .comic-bottom-left .artists,
+.bottom .comic-details-bottom .comic-bottom-left .writers {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom .comic-details-bottom .comic-bottom-left .artists-names,
+.bottom .comic-details-bottom .comic-bottom-left .writers-names {
+  width: 70%;
+}
+.bottom .comic-details-bottom .comic-bottom-right {
+  width: 50%;
+}
+.bottom .comic-details-bottom .comic-bottom-right .series,
+.bottom .comic-details-bottom .comic-bottom-right .price,
+.bottom .comic-details-bottom .comic-bottom-right .sale-date {
+  display: flex;
+}
+.bottom .comic-details-bottom .comic-bottom-right .series span,
+.bottom .comic-details-bottom .comic-bottom-right .price span,
+.bottom .comic-details-bottom .comic-bottom-right .sale-date span {
+  width: 30%;
 }
